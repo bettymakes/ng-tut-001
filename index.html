@@ -1,0 +1,17 @@
+<html ng-app="youtube">
+  <head>
+    <title>Angular Tut 001</title>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/resources.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </head>
+  <body>
+    <div ng-controller="youtubeCtrl">
+      <table>
+        <tr ng-repeat="yt in youtubeResult.feed.entry">
+          <td>{{yt.title.$t}}</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
