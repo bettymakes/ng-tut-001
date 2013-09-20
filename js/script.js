@@ -6,6 +6,10 @@ function youtubeCtrl($scope, $resource){
     {get:{method:'JSONP'}}
   );
 
-  $scope.youtubeResult = $scope.youtube.get();
+
+
+  $scope.doSearch = function(){
+    $scope.youtubeResult = $scope.youtube.get({q:$scope.searchTerm});
+  }
 
 }

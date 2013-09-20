@@ -7,6 +7,10 @@
   </head>
   <body>
     <div ng-controller="youtubeCtrl">
+      <form>
+        <input type="text" ng-model="searchTerm"/>
+        <button ng-click="doSearch()">Search</button>
+      </form>
       <table>
         <tr ng-repeat="yt in youtubeResult.feed.entry">
           <td>{{yt.title.$t}}</td>
